@@ -3,6 +3,8 @@
 # Welcome to the ReEDS Interactive Visualization Tool!
 # Please address all concerns/comments/suggestions to Thomas Bowen
 
+# For the set up, please refer to the README.txt file in the same directory as this script
+
 
 # Notes to users: 
 
@@ -22,6 +24,19 @@
 if (!require("pacman")){
   install.packages("pacman")
 }
+
+# # Because of multiple packages' dependency on rJava, and its notorious fickleness, we will install and load separately
+# if (!require("rJava")){
+#   
+#   # point r to your installation of java CHANGE THE DIRECTORY!!!
+#   Sys.setenv(JAVA_HOME='C:\\Your\\Java\\Directory')
+#   
+#   # install and load
+#   install.packages("rJava")
+#   library(rJava)
+#   
+#   
+# }
 
 # Load rest of packages
 pacman::p_load(data.table,           # Used to manipulate data frames and create data.table objects
@@ -43,6 +58,8 @@ pacman::p_load(data.table,           # Used to manipulate data frames and create
                                      # in the gdx_extract_all() function below 
                
                processx,             # oof, no idea, I think it's extraneous but will check it out later
+               
+               units,                # needed for 'sf' package, when the pop up comes for installing with compilation hit no.
                
                sf,                   # all of the following packages are used to manipulate shape files and create country maps
                raster, 

@@ -15,6 +15,7 @@ gdx_extract_all <- function(scenarios, variable_list = gdx.structure, scen.dir =
       ## set up each worker.  Could also use clusterExport()
       library(gdxrrw)
       library(data.table)
+      # CHANGE DIRECTORIES HERE!!!
       gams.directory <- "/../../../../../../Program Files (x86)/GAMS/win64"
       gms.dir <- "/../../../../../../Program Files (x86)/GAMS/win64"
       data.folder <- "../capexp-india/ReEDS-2.0/gdxfiles"

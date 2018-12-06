@@ -1,50 +1,81 @@
-This code is based heavily/entirely on the work of Yinong Sun and is being adapted for ReEDS-2.0 India by Thomas Bowen.
+###########################
+Instructions for ReEDS Visualization tool - Last update on December 06, 2018 @ 3:00 PM
 
-The original can be found in the main ReEDS Github Repo.
+Please address all comments, complaints, questions and expletives to Thomas Bowen
 
-Started: 11/15/2018
+############################
+Packages
+
+The first issue you might run into is in loading the packages. 
+The first time this is done it will take some time as you will be installing a few packages with non-insignificant dependencies.
+Of these, the most troublesome will be 'qdap' as it depends on rJava.
+
+If you have issues with these you might see an error:
+       "Loading required package: qdap
+	Error : .onLoad failed in loadNamespace() for 'rJava', details:
+	call: fun(libname, pkgname)
+	error: JAVA_HOME cannot be determined from the Registry"
+
+This means that R cannot find your copy of Java (either because you have the wrong installation (32-bit vs 64-bit) or 
+because you haven't installed it all).
+
+	For more information on this error see the following stackexchange: 
+		"https://stackoverflow.com/questions/9120270/how-can-i-install-rjava-for-use-with-64bit-r-on-a-64-bit-windows-computer"
+
+	Essentially you just need to point R to your installation of Java.
+
+	This is currently in the code but commented out (lines 28-39 as of initial edition, below loading 'pacman')
 
 
-----------------------------------------------------
-----------------------------------------------------
-######	Notes and potential sources of error  ######
-----------------------------------------------------
-----------------------------------------------------
+The next issue you might have with is 'units' because it will ask if you want to source from somewhere that needs to compile, 
+just select no and it should work
 
-1) Gams Directory Issues
-When trying to find the version of gams in use, the original code pointed to 'C:/' directly, new code points to 'C:/Program Files (86x)' (as that's where mine is);
-In order to simplify the adaptation of this for other users, I am using an R Project ("InteractiveDataVisualizer") which helps keep the directory paths in order;
-However, to jump up to the 'C:/Program Files (86x)' from the RProject directory I use an arbitrary number of "../"'s which should take the user to the C drive but may be insufficient.
+Please let me know if there are any other issues with the packages!
 
-2) INR cost coversions
-In the "\inout\R\readwrite.R" function costs are converted (for the objective function and elsewhere) from thousands to billions, need to find out what the standard output for ReEDS-India objective function is
 
-3) AC-DC
-In the "\inout\R\readwrite.R" function solar is converted from DC to AC, do we need to do that post processing? Or does it happen in the Supply file or elsewhere?
 
-4) Plotting functions 'templates.R'
-"\inout\R\templates.R" is going to need a LOT of reworking and trimming back ... just a heads up
 
-5) Present Value Factors
-In "\inout\R\auxillary.R" there is a function 'present_value_factors' which has a lot of specific values which will need to be rechecked and could possibly be exported to csv's for easier manipulation
+######################
+Directories
 
-6) Input csv's 
-Need to go and double check all of the tech types available, etc. and adjust the csv's appropriately
+The next issue you may have is with directories.
+You will need to change all of the directories in the 'point to appropriate directories' section
+These include:
+	
+	1) setting the working directory to the file location ABOVE where the r script is, 
+	
+	2) changing where gams can be found (you will likely need to have a (or several) '/../' to help r escape from it's current working directory
 
-7) Relative r Project - gdx file location
-This assumes that the r project exists in a folder which is at the same 'level' as the 'capexp-india' folder
+	3) directories for the csv files, functions, server/ui scripts (when you pull the repo they should already be in the proper format)
 
-8) '.gdx.structure'
-a)
-This is a key list (defined in "inout/R/reeds_function.R") which determines the overall structure of all the gdx files to be read in. This needs to be adapted to our ReEDS - India model.
-Unfortunately, it is defined in Yinong's version using .gdx files which I can find in the Y drive ("Y:\6A20\Public\SCohen\CIRA\ReEDS Results\CIRA_Ref_to2050_v2016FR_20160725\gdxfiles"),
-but of whose origin and purpose I am unsure. Need to dif into actual .gms files to see how they are created. Then need to create equivalent .gdx files for India ReEDS model and 
-change .gdx.structure appropriately.
+	4) directory of the gdx files
 
-b)
-Only including variables in '.gdx.structure' for now
+	5) location and title of the shape file (.shp)
 
-9) creating 'gdx_str_file.csv'
-happens in 'gdx_str_generator.R', build out based on random selection of a gdx file, assumes that all gdx files are of same basic structure, may not be the case
 
-10) 
+
+
+######################
+gdx_all_var
+
+One specific note regarding the function 'gdx_all_var' (which uploads all the relevant gdx data):
+
+	If you choose to run this function with the 'parallel' argument equal to TRUE, it will run faster BUT you will need 
+	to actually go into the 'gdx_extract_all.R' script and manually change some of the directories 
+	(look for the '# CHANGE DIRECTORIES HERE!!!' note on line 18). This happens because when running operations in parallel 
+	the clusters cannot see the global environment, so far I cannot figure out a workaround...
+
+#######################
+Additional notes
+
+That's all that I can foresee now (although there will certainly be unforeseen issues). 
+Regarding questions inside of the shiny tool, the first tab has instructions on it and if that doesn't solve it please contact me.
+
+When we get more funding my next steps (assuming you all do not have more pressing priorities) are to add more informative error 
+messages and continue to shift some of the plotting parameters over to csv's so that a non-R-user can easily adjust things as they see fit.
+
+----------
+
+Best of luck, I look forward to your feedback and hope the tool proves useful!!
+
+-Thomas

@@ -1,0 +1,19 @@
+Complete,Simplified,User Defined
+CCGT Gas,Curtailment,Solar
+CCGT LNG,Other,Wind
+CCGT Naphtha,Fuel oil,Hydro
+Biomass,Diesel,Nuclear
+CT Gas,Gas CT,Coal
+Diesel,Gas CC,Gas
+Hydro - Pondage,Sub-coal,
+Hydro - Storage,Super-coal,
+Pumped Hydro,Nuclear,
+Run-of-River Hydro,Hydro,
+Nuclear,Solar-PV,
+Subcritical Coal,Wind,
+Supercritical Coal,,
+Subcrtical Lignite,,
+Utility PV,,
+Distributed PV,,
+Waste-to-Heat,,
+Wind,,

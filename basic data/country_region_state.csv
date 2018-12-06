@@ -1,0 +1,35 @@
+Gams_out,State,Region,Country,User Defined
+Andhra_Pradesh,Andhra Pradesh,SR,India,South
+Arunachal_Pradesh,Arunachal Pradesh,NER,India,East
+Assam,Assam,NER,India,East
+Bihar,Bihar,ER,India,East
+Chandigarh,Chandigarh,NR,India,North
+Chhattisgarh,Chhattisgarh,WR,India,West
+Dadra_Nagar_Haveli,Dadra and Nagar Haveli,WR,India,West
+Daman_Diu,Daman and Diu,WR,India,West
+Delhi,Delhi,NR,India,North
+Goa,Goa,WR,India,West
+Gujarat,Gujarat,WR,India,West
+Haryana,Haryana,NR,India,North
+Himachal_Pradesh,Himachal Pradesh,NR,India,North
+Jammu_Kashmir,Jammu and Kashmir,NR,India,North
+Jharkhand,Jharkhand,ER,India,East
+Karnataka,Karnataka,SR,India,South
+Kerala,Kerala,SR,India,South
+Madhya_Pradesh,Madhya Pradesh,WR,India,West
+Maharashtra,Maharashtra,WR,India,West
+Manipur,Manipur,NER,India,East
+Meghalaya,Meghalaya,NER,India,East
+Mizoram,Mizoram,NER,India,East
+Nagaland,Nagaland,NER,India,East
+Odisha,Odisha,ER,India,East
+Puducherry,Puducherry,SR,India,South
+Punjab,Punjab,NR,India,North
+Rajasthan,Rajasthan,NR,India,North
+Sikkim,Sikkim,ER,India,East
+Tamil_Nadu,Tamil Nadu,SR,India,South
+Telangana,Telangana,SR,India,South
+Tripura,Tripura,NER,India,East
+Uttar_Pradesh,Uttar Pradesh,NR,India,North
+Uttarakhand,Uttarakhand,NR,India,North
+West_Bengal,West Bengal,ER,India,East

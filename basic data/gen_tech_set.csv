@@ -1,0 +1,19 @@
+Gams_out,Complete,Simplified,User Defined,color.complete,color.simple,color.user,color.palette.map
+CCGT-GAS,CCGT Gas,Gas CC,Gas,#771155,lightpink,violetred2,PuRd
+CCGT-LNG,CCGT LNG,Gas CC,Gas,#AA4488,lightpink,violetred2,PuRd
+CCGT-NAPTHA,CCGT Naphtha,Gas CC,Gas,#CC99BB,lightpink,violetred2,PuRd
+COGENERATION-BAGASSE,Biomass,Other,Other,#114477,gray20,peru,YlOrBr
+CT-GAS,CT Gas,Gas CT,Gas,#4477AA,firebrick,violetred2,PuRd
+DIESEL,Diesel,Diesel,Other,#77AADD,peru,peru,YlOrBr
+HYDRO-PONDAGE,Hydro - Pondage,Hydro,Hydro,#117777,dodgerblue2,dodgerblue2,Blues
+HYDRO-STORAGE,Hydro - Storage,Hydro,Hydro,#44AAAA,dodgerblue2,dodgerblue2,Blues
+HYDRO-PUMPED,Pumped Hydro,Hydro,Hydro,#77CCCC,dodgerblue2,dodgerblue2,Blues
+HYDRO-ROR,Run-of-River Hydro,Hydro,Hydro,#117744,dodgerblue2,dodgerblue2,Blues
+NUCLEAR,Nuclear,Nuclear,Nuclear,#44AA77,mediumpurple3,mediumpurple3,Purples
+SUBCRITICAL-COAL,Subcritical Coal,Sub-coal,Coal,#88CCAA,violetred2,gray50,Reds
+SUPERCRITICAL-COAL,Supercritical Coal,Super-coal,Coal,#777711,darkolivegreen4,gray50,Reds
+SUBCRITICAL-LIGNITE,Subcrtical Lignite,Fuel oil,Coal,#AAAA44,gray50,gray50,Reds
+UPV,Utility PV,Solar-PV,Solar,#DDDD77,goldenrod1,goldenrod1,YlOrRd
+DUPV,Distributed PV,Solar-PV,Solar,#774411,goldenrod1,goldenrod1,YlOrRd
+WHR,Waste-to-Heat,Other,Other,#AA7744,gray20,peru,YlOrBr
+WIND,Wind,Wind,Wind,#DDAA77,steelblue3,steelblue3,GnBu

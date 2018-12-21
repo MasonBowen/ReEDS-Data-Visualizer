@@ -16,8 +16,8 @@ gdx_extract_all <- function(scenarios, variable_list = gdx.structure, scen.dir =
       library(gdxrrw)
       library(data.table)
       # CHANGE DIRECTORIES HERE!!!
-      gams.directory <- "/../../../../../../Program Files (x86)/GAMS/win64"
-      gms.dir <- "/../../../../../../Program Files (x86)/GAMS/win64"
+      gams.directory <- "/../../../../../../Users/tbowen/AppData/Local/Programs/GAMS/"
+      gms.dir <- "/../../../../../../Users/tbowen/AppData/Local/Programs/GAMS/"
       data.folder <- "../capexp-india/ReEDS-2.0/gdxfiles"
       functions.directory <- "ReEDS - Visualization Tool/functions"
       basicdata.directory <- "ReEDS - Visualization Tool/basic data"

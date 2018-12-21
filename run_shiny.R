@@ -67,7 +67,9 @@ pacman::p_load(data.table,           # Used to manipulate data frames and create
                maptools,
                scales,
                rgdal,
+               mapproj,
                
+               reshape2,
                gdxrrw,               # needed to interact with GAMS .gdx files
                
                shiny,                # Used to actually render the shiny output
@@ -81,7 +83,7 @@ pacman::p_load(data.table,           # Used to manipulate data frames and create
 # Set working directory as needed
 setwd("/../Users/tbowen/Documents/Github/InteractiveDataVisualizer")
 
-gams.directory <- "/../../../../../../Program Files (x86)/GAMS/win64" # should point to your installation of GAMS
+gams.directory <- "/../../../Users/tbowen/AppData/Local/Programs/GAMS/" # should point to your installation of GAMS
 
 base.directory <- "ReEDS - Visualization Tool"         # should point to the folder where all this data is stored (relative to current directory)
 

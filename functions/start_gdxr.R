@@ -14,11 +14,11 @@ for (version in GAMSVersions){
     break
   }
 }
-gams.folder <- paste0("C:/Program Files (x86)/GAMS/win64/",Selected_GAMSVersion,"/")
+gams.folder <- file.path(gms.dir,Selected_GAMSVersion)
 
 
 
-start_gams <- function(dir = paste0("/../Program Files (x86)/GAMS/win64/",Selected_GAMSVersion)) {
+start_gams <- function(dir = paste0("/../../../Users/tbowen/AppData/Local/Programs/GAMS/",Selected_GAMSVersion)) {
   # Try to load package
   out <- require(gdxrrw)
   
@@ -34,5 +34,5 @@ start_gams <- function(dir = paste0("/../Program Files (x86)/GAMS/win64/",Select
   }
 }
 
-start_gams()
+start_gams(dir = gams.folder)
 

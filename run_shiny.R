@@ -189,6 +189,17 @@ gdx_all_var <- gdx_extract_all(scenario = scenarios, parallel = TRUE)
 
 # The ui (User Interface) create the skeleton for the shiny but does not actually perform any real action
 ui <- fluidPage(theme = shinytheme("readable"),
+                
+                tags$head(
+                  tags$style(HTML("
+                                  .shiny-output-error-validation {
+                                  color: red;
+                                  font-weight:bold;
+                                  font-size:14px;
+                                  }
+                                  "))
+                  ),
+                
                 titlePanel("ReEDS Interactive Scenario Comparison Dashboard"),
                 sidebarLayout(
                   source(file.path(ui.directory, "sidebar.ui_new.R"), local = TRUE)$value, # creates a sidebar visible from all tabs

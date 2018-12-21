@@ -5,7 +5,6 @@
 
 # For the set up, please refer to the README.txt file in the same directory as this script
 
-
 # Notes to users: 
 
 #         1) You may need to change the 'base.directory' variable below to point R to the proper folder(s)
